@@ -1,0 +1,103 @@
+Analisis dan Kebutuhan Sistem untuk Sistem Pemesanan Tiket Kebun Binatang Online (Zoo Park):
+
+1. Analisis Sistem
+Sistem pemesanan tiket kebun binatang online bertujuan untuk mempermudah pengunjung dalam membeli tiket secara online serta mempermudah pihak kebun binatang dalam mengelola data tiket, pembayaran, dan kunjungan pengunjung. Sistem ini mencatat dan mengelola informasi tentang pengunjung, jenis tiket, transaksi pemesanan, serta memberikan konfirmasi pemesanan dalam bentuk tiket elektronik.
+
+Aktor Sistem:
+
+Pengunjung: Bertugas untuk memesan tiket, memilih jenis tiket, dan melakukan pembayaran.
+Admin: Bertanggung jawab untuk mengelola data pengunjung, tiket yang tersedia, dan transaksi pemesanan. Admin juga memverifikasi pembayaran dan mengelola jadwal tiket yang tersedia.
+Manajer IT: Bertanggung jawab atas pengembangan dan pemeliharaan sistem serta menjaga keamanan dan keandalan sistem.
+Proses Sistem:
+
+Pengunjung memilih jenis tiket yang ingin dibeli.
+Pengunjung memilih tanggal kunjungan dan jumlah tiket.
+Pengunjung mengisi data diri dan melakukan pembayaran.
+Admin memverifikasi pembayaran dan memproses pemesanan.
+Pengunjung menerima tiket elektronik yang dapat dicetak atau ditunjukkan melalui perangkat mobile pada saat masuk kebun binatang.
+2. Kebutuhan Pengguna
+Pengunjung:
+
+Pengunjung akan bertanggung jawab untuk:
+Memilih jenis tiket yang diinginkan (dewasa, anak-anak, keluarga, dll).
+Memilih tanggal kunjungan dan jumlah tiket yang diperlukan.
+Melakukan pembayaran secara online menggunakan berbagai metode pembayaran yang tersedia.
+Menerima tiket elektronik setelah pembayaran berhasil.
+Admin:
+
+Admin akan bertanggung jawab untuk:
+Mengelola jenis tiket yang tersedia (menambah, mengedit, dan menghapus data tiket).
+Mengelola jadwal tiket yang dapat dibeli (menambah dan mengatur ketersediaan tiket).
+Memverifikasi pembayaran yang diterima dari pengunjung.
+Menyusun dan mengelola laporan transaksi pemesanan.
+Manajer IT:
+
+Bertanggung jawab atas pengelolaan dan pengembangan sistem, serta memastikan keamanan dan kinerja yang optimal.
+3. Analisis Proses Bisnis
+Pengunjung memilih jenis tiket dan tanggal kunjungan.
+Pengunjung mengisi form pemesanan yang mencakup data diri dan jumlah tiket yang diperlukan.
+Pengunjung melakukan pembayaran menggunakan metode yang tersedia.
+Admin memverifikasi pembayaran yang dilakukan oleh pengunjung dan mengonfirmasi status pemesanan.
+Setelah pembayaran terverifikasi, Pengunjung menerima tiket elektronik (PDF atau QR Code).
+Admin dapat mengelola data pemesanan, mengubah status tiket, serta melihat laporan pemesanan secara real-time.
+4. Kebutuhan Sistem (Functional & Non-Functional)
+Kebutuhan Fungsional (Functional Requirements)
+Login Pengguna dan Admin
+
+Deskripsi: Pengunjung dan Admin harus dapat login dengan kredensial yang valid.
+Proses: Pengguna memasukkan username dan password, sistem memverifikasi kredensial. Jika valid, pengguna dapat mengakses sistem.
+Kebutuhan:
+Sistem harus memvalidasi kredensial pengguna.
+Sistem harus memberikan pesan kesalahan jika login gagal.
+Pemesanan Tiket
+
+Deskripsi: Pengunjung dapat memilih jenis tiket, jumlah tiket, dan tanggal kunjungan.
+Proses: Pengunjung memilih tiket yang tersedia, mengisi form data diri, dan melakukan pemesanan.
+Kebutuhan:
+Semua field harus diisi sebelum data pemesanan dapat disimpan.
+Sistem harus menghasilkan ID pesanan yang unik.
+Data pemesanan harus disimpan dengan format yang benar di database.
+Pembayaran Tiket
+
+Deskripsi: Pengunjung dapat melakukan pembayaran secara online menggunakan kartu kredit, transfer bank, atau metode pembayaran lainnya.
+Proses: Pengunjung memilih metode pembayaran dan sistem memverifikasi pembayaran.
+Kebutuhan:
+Pembayaran harus diverifikasi dan status pembayaran harus tercatat dengan benar.
+Pembayaran yang gagal harus diberi tahu kepada pengunjung.
+Konfirmasi dan Pengiriman Tiket
+
+Deskripsi: Setelah pembayaran berhasil, pengunjung menerima tiket elektronik.
+Proses: Sistem mengirimkan tiket elektronik kepada pengunjung melalui email atau unduhan PDF/QR Code.
+Kebutuhan:
+Tiket harus dikirim dengan format yang sesuai dan berisi detail pemesanan.
+Laporan Pemesanan
+
+Deskripsi: Admin dapat melihat laporan pemesanan berdasarkan tanggal, jumlah tiket, dan status pembayaran.
+Kebutuhan:
+Laporan harus mencakup semua data pemesanan yang tercatat.
+Admin harus dapat mengekspor atau mencetak laporan pemesanan.
+Kebutuhan Non-Fungsional (Non-Functional Requirements)
+Keamanan
+
+Deskripsi: Sistem harus aman dan melindungi data pribadi pengunjung dan transaksi pemesanan.
+Kebutuhan:
+Sistem harus menggunakan otentikasi yang aman (misalnya, otentikasi dua faktor untuk admin).
+Data yang disimpan harus terenkripsi.
+Keandalan (Reliability)
+
+Deskripsi: Sistem harus tersedia 99% sepanjang waktu dan meminimalkan downtime.
+Kebutuhan:
+Backup data harus dilakukan secara rutin.
+Sistem harus dapat mengatasi jumlah transaksi yang tinggi dengan downtime minimal.
+Kinerja (Performance)
+
+Deskripsi: Sistem harus dapat memproses pemesanan dengan cepat.
+Kebutuhan:
+Waktu respons sistem harus kurang dari 3 detik untuk transaksi pemesanan.
+Sistem harus dapat menangani hingga 500 transaksi per menit tanpa penurunan kinerja.
+Usability
+
+Deskripsi: Antarmuka sistem harus mudah digunakan oleh pengunjung dan admin yang tidak memiliki latar belakang teknis.
+Kebutuhan:
+Desain UI harus intuitif dan mudah dipahami.
+Proses pemesanan tiket dan pembayaran harus sederhana.
