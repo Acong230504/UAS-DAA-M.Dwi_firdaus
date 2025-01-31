@@ -1,0 +1,24 @@
+@startuml
+actor "Pengunjung" as Pengunjung
+actor Admin
+
+package "Sistem Pemesanan Tiket Kebun Binatang" {
+    usecase "Melihat Paket Tiket" as UC1
+    usecase "Memilih Paket Tiket" as UC2
+    usecase "Melakukan Pemesanan" as UC3
+    usecase "Melakukan Pembayaran" as UC4
+    usecase "Mendapatkan Tiket Elektronik" as UC5
+    usecase "Mengelola Paket Tiket" as UC6
+    usecase "Mengelola Pemesanan Tiket" as UC7
+}
+
+Pengunjung --> UC1 : "Melihat Paket"
+UC1 --> UC2 : "Memilih Paket"
+UC2 --> UC3 : "Melakukan Pemesanan"
+UC3 --> UC4 : "Melakukan Pembayaran"
+UC4 --> UC5 : "Mendapatkan Tiket"
+
+Admin --> UC6 : "Mengelola Paket Tiket"
+Admin --> UC7 : "Mengelola Pemesanan Tiket"
+
+@enduml
